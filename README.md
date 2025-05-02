@@ -1,64 +1,91 @@
 **Bank-on-it-Pt-I**
 
-**Classes**
+
+**Start the program.**
+
+Set up accounts:
+
+Create a CheckingAccount with $100.
+
+Create a SavingsAccount with $200.
+
+Set up the user (Customer):
+
+Make a Customer named "Alice" with PIN "1111".
+
+Give Alice both the checking and savings accounts.
+
+Ask the user to log in:
+
+Prompt: "Enter username:"
+
+Prompt: "Enter PIN:"
+
+Check if the input matches Alice's username and PIN.
+
+If it matches: show "Login Successful".
+
+If not: show "Login failed." and stop there.
+
+If login is successful:
+
+Show the Customer Menu:
 
 
-CheckingAccount: Represents a checking account with a balance. It can check balance, make deposits, and withdrawals.
+Customer Menu
+1) Checking Account
+2) Savings Account
+3) Quit
+Ask the user to pick an option (1–3).
+
+Keep looping this menu until the user picks 3 (Quit).
+
+If user picks Checking or Savings account:
+
+Show the Account Menu:
 
 
-HasMenu Interface: Requires menu() and start() methods for the menu and starting the program.
+Account menu
+0) quit
+1) check balance
+2) make a deposit
+3) make a withdrawal
+Ask the user to choose an option (0–3).
+
+Repeat the account menu until the user chooses 0 (to go back to the Customer Menu).
+
+What each account option does:
+
+Option 1 – Check Balance:
+
+Print the balance (formatted like $100.00).
+
+Option 2 – Deposit:
+
+Ask for the deposit amount.
+
+Add that amount to the account balance.
+
+Show “Deposit successful.”
+
+Option 3 – Withdrawal:
+
+Ask for the withdrawal amount.
+
+If there’s enough money:
+
+Subtract it from the balance.
+
+Show “Withdrawal successful.”
+
+If not enough money:
+
+Show “Insufficient funds.”
+
+Quit:
+
+If the user picks "3" from the customer menu, or "0" from the account menu, go back or exit.
+
+End the program.
 
 
-**Variables and Constructors**
-
-
-balance: Holds the account balance.
-
-
-input: A Scanner for user input.
-
-
-Constructors: One sets the balance to 0.0, and the other allows setting a custom balance.
-
-**Methods**
-
-
-getBalance(): Returns the current balance.
-
-
-getBalanceString(): Formats the balance as a string with a dollar sign.
-
-
-setBalance(double balance): Updates the balance.
-
-menu()  Displays options:
-
-0) Quit
-
-1) Check balance
-
-2) Deposit money
-
-3) Withdraw money
-
-start() 
-
-Shows the menu and reads user input.
-
-Based on choice, it either quits, checks balance, deposits money, or withdraws money.
-
-**Methods for Operations**
-
-
-checkBalance(): Displays the current balance.
-
-
-makeDeposit(): Asks for an amount, adds it to the balance, and confirms.
-
-
-makeWithdrawal(): Asks for an amount, checks if the user has enough money, and either withdraws or shows an error.
-
-
-main():
-
-Creates a CheckingAccount with $100.00 and starts the menu
