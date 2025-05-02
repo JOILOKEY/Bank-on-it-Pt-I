@@ -13,6 +13,24 @@ SavingsAccount.class: SavingsAccount.java CheckingAccount.class
 HasMenu.class: HasMenu.java
 	javac -g HasMenu.java
 
+Main.class: Main.java Customer.class
+	javac -g Main.java
+
+testAdmin: Admin.class
+	java Admin
+
+testCustomer: Customer.class
+	java Customer
+
 testChecking: CheckingAccount.class
 	java CheckingAccount
+
+testSavings: SavingsAccount.class
+	java SavingsAccount
+
+testApp: Main.class
+	java Main
+
+clean:
+	rm *.class
 

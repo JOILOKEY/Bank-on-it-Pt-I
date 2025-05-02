@@ -78,10 +78,5 @@ public class CheckingAccount implements HasMenu {
             System.out.println("Insufficient funds.");
         }
     }
-
-    public static void main(String[] args) {
-        CheckingAccount myAccount = new CheckingAccount(100.00);
-        myAccount.start();
-    }
 }
 
