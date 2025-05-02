@@ -20,24 +20,20 @@ public class Customer extends User {
     }
 
     public void start() {
-        boolean done = false;
-        while (!done) {
-            System.out.print(menu());
-            String choice = input.nextLine();
-            switch (choice) {
-                case "1":
-                    checking.start();
-                    break;
-                case "2":
-                    savings.start();
-                    break;
-                case "3":
-                    done = true;
-                    break;
-                default:
-                    System.out.println("Invalid choice.");
-            }
+    boolean done = false;
+    while (!done) {
+        System.out.print(menu());
+        String choice = input.nextLine();
+        if (choice.equals("1")) {
+            checking.start();  
+        } else if (choice.equals("2")) {
+            savings.start(); 
+        } else if (choice.equals("3")) {
+            done = true;  
+        } else {
+            System.out.println("Invalid choice."); 
         }
     }
 }
 
+}
